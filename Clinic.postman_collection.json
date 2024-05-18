@@ -1,0 +1,1975 @@
+{
+	"info": {
+		"_postman_id": "7f3e003d-a62b-4200-ab50-0da60f427e35",
+		"name": "Clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12689725"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bharatrav8077@gmail.com\",\r\n    \"password\": \"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/auth/login",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"gender\": \"Male\",\r\n    \"email\": \"earningonline2100@gmail.com\",\r\n    \"languages\": \"english\",\r\n    \"mobileNo\": \"+917906340435\",\r\n    \"address\": \"123 Main St, City\",\r\n    \"userRole\": \"doctors\",\r\n    \"image\": \"profile.jpg\",\r\n    \"bio\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/auth/register-user",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPatient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Doe\",\r\n    \"birthday\": \"1990-01-01\",\r\n    \"email\": \"jane5@example.com\",\r\n    \"gender\": \"Female\",\r\n    \"mobileNo\": \"1234567890\",\r\n    \"bloodGroup\": \"A+\",\r\n    \"weight\": 70,\r\n    \"height\": 170,\r\n    \"address\": \"456 Elm St, City\",\r\n    \"image\": \"profile.jpg\",\r\n    \"period\": \"5 years\",\r\n    \"familyHistory\": \"Brother\",\r\n    \"diseases\": \"Hypertension\",\r\n    \"martialStatus\": true,\r\n    \"patientHistory\": \"testing history\",\r\n    \"userId\": 51,\r\n    \"healthConditions\": \"Eczema\",\r\n    \"currentIllnesses\": \"Headache\",\r\n    \"previousIllnesses\": \"Chickenpox\",\r\n    \"SpecificAllergies\": \"Pollen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/auth/add-patient",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"add-patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"earningonline2100@gmail.com\",\r\n    \"emailOtp\": \"119034\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/auth/verify-email",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyMobilePhone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bharatrav8077@gmail.com\",\r\n    \"mobileOtp\": \"123456\",\r\n    \"mobileNo\":\"8077133663\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/auth/verify-mobile",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify-mobile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getPatient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/users/get-patients/51",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"get-patients",
+								"51"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getPatient",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clinicUrl}}/api/v1/users/get-patients/51",
+									"host": [
+										"{{clinicUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"get-patients",
+										"51"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "394"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18a-JMI++/VtksSXV20Od7xk9ZW3hk0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 May 2024 06:43:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\",\n            \"birthday\": \"1990-01-01\",\n            \"email\": \"jane2@example.com\",\n            \"gender\": \"Female\",\n            \"martialStatus\": \"married\",\n            \"mobileNo\": \"1234567890\",\n            \"bloodGroup\": \"A+\",\n            \"weight\": 70,\n            \"height\": 170,\n            \"address\": \"456 Elm St, City\",\n            \"period\": \"5 years\",\n            \"familyHistory\": \"Brother\",\n            \"image\": \"profile.jpg\",\n            \"patientHistory\": \"testing history\",\n            \"diseases\": \"Hypertension\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "editPaitent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Doe\",\r\n    \"birthday\": \"2000-01-01\",\r\n    \"email\": \"jane.doe@example.com\",\r\n    \"gender\": \"Female\",\r\n    \"mobileNo\": \"1234567890\",\r\n    \"bloodGroup\": \"A+\",\r\n    \"weight\": 70,\r\n    \"height\": 170,\r\n    \"address\": \"456 Elm St, City\",\r\n    \"image\": \"profile_updated.jpg\",\r\n    \"martialStatus\": \"married\",\r\n    \"patientHistory\": \"testing history1\",\r\n    \"healthConditions\": \"Eczema\",\r\n    \"currentIllnesses\": \"Headache\",\r\n    \"previousIllnesses\": \"Chickenpox\",\r\n    \"SpecificAllergies\": \"Peanuts\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/users/edit-patient/13",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"edit-patient",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePaitent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/users/delete-patient/2",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"delete-patient",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSettings",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Testing first_name\",\r\n    \"lastName\": \"Testing last_name\",\r\n    \"address\": \"testing address\",\r\n    \"language\":\"english\",\r\n    \"appointment_interval\": 30, // please add in minute only.\r\n    \"schedule\": {\r\n        \"Monday\": {\r\n            \"startTime\": \"09:00\",\r\n            \"endTime\": \"17:00\"\r\n        },\r\n        \"Tuesday\": {\r\n            \"startTime\": \"09:00\",\r\n            \"endTime\": \"17:00\"\r\n        },\r\n        \"Wednesday\": {\r\n            \"startTime\": \"09:00\",\r\n            \"endTime\": \"17:00\"\r\n        },\r\n        \"Thursday\": {\r\n            \"startTime\": \"09:00\",\r\n            \"endTime\": \"17:00\"\r\n        },\r\n        \"Friday\": {\r\n            \"startTime\": \"09:00\",\r\n            \"endTime\": \"17:00\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/users/settings/51",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"settings",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSettings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/users/settings/51",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"settings",
+								"51"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "drug",
+			"item": [
+				{
+					"name": "getDrug",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/drugs/get-drugs",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drugs",
+								"get-drugs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getDrug",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clinicUrl}}/api/v1/medicine/get-medicine",
+									"host": [
+										"{{clinicUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"medicine",
+										"get-medicine"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18-HEu+KhQTyNbygUB5NAeu6LTGm2I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 19 Apr 2024 09:19:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"medicine\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "addDrug",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Paracetamol\",\r\n  \"genericName\":\"acetaminophen\",\r\n  \"note\":\"medicince for cure fever\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/drugs/add-drug",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drugs",
+								"add-drug"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editDrug",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Paracetamol\",\r\n  \"genericName\":\"acetaminophen\",\r\n  \"note\":\"medicince for cure nose running\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/drugs/drug/1",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drugs",
+								"drug",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDrug",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/drugs/delete-drug/1",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"drugs",
+								"delete-drug",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tests",
+			"item": [
+				{
+					"name": "getTests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{liveUrl}}/api/v1/test/get-tests",
+							"host": [
+								"{{liveUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"test",
+								"get-tests"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getTests",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clinicUrl}}/api/v1/test/get-tests",
+									"host": [
+										"{{clinicUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"test",
+										"get-tests"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15-5cWLSDae+Zojl/GY/lgcfTG/TwU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 19 Apr 2024 09:52:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"tests\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "addTest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Blood Test\",\r\n  \"description\": \"A comprehensive blood test to assess overall health.\",\r\n  \"procedure\": \"Collect blood sample from the patient and send it to the laboratory for analysis.\",\r\n  \"cost\": 100,\r\n  \"duration\": \"1 day\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/test/add-test",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"test",
+								"add-test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editTest",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Blood Test\",\r\n  \"description\": \"A comprehensive blood test to assess overall health.\",\r\n  \"procedure\": \"Collect blood sample from the patient and send it to the laboratory for analysis.\",\r\n  \"cost\": 100,\r\n  \"duration\": \"1 day\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/test/edit-test/2",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"test",
+								"edit-test",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTest",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/test/delete-test/2",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"test",
+								"delete-test",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "public/upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/kunal/Desktop/Sona-Machinery-IPO-GMP.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/public/upload",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"public",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "public/download",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/public/download/?filename=64f8676c2e06fd0e421c1caaebd06dd4",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"public",
+								"download",
+								""
+							],
+							"query": [
+								{
+									"key": "filename",
+									"value": "64f8676c2e06fd0e421c1caaebd06dd4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "public/download",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{estuBackend}}/api/v1/public/download/?filename=newfile",
+									"host": [
+										"{{estuBackend}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"public",
+										"download",
+										""
+									],
+									"query": [
+										{
+											"key": "filename",
+											"value": "newfile"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-x4kgHmbW4EBsjAVjmtjSgbu0pks\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Feb 2024 12:43:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "https://d3dchamidolacn.cloudfront.net/newfile"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "prescription",
+			"item": [
+				{
+					"name": "add prescription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": 9,\r\n    \"drugs\": [\r\n        {\r\n            \"type\": \"Tablet\",\r\n            \"name\": \"Paracetamol\",\r\n            \"mg\": 500,\r\n            \"dose\": \"1 tablet\",\r\n            \"duration\": \"3 times a day\",\r\n            \"advice\": \"Take with food\"\r\n        },\r\n        {\r\n            \"type\": \"Capsule\",\r\n            \"name\": \"Amoxicillin\",\r\n            \"mg\": 250,\r\n            \"dose\": \"1 capsule\",\r\n            \"duration\": \"2 times a day\",\r\n            \"advice\": \"Take with plenty of water\"\r\n        }\r\n    ],\r\n    \"tests\": [\r\n        {\r\n            \"name\": \"Blood Test\",\r\n            \"description\": \"Complete blood count (CBC)\"\r\n        },\r\n        {\r\n            \"name\": \"Urine Test\",\r\n            \"description\": \"Urinalysis\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/prescription/add-prescription/51",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"prescription",
+								"add-prescription",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get prescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/prescription/get-prescription/51",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"prescription",
+								"get-prescription",
+								"51"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get prescription",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clinicUrl}}/api/v1/prescription/get-prescription",
+									"host": [
+										"{{clinicUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"prescription",
+										"get-prescription"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "821"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"335-acYFM6XNVSFDnXXRiUoNrXVET78\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 06:18:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"prescriptions\": [\n            {\n                \"id\": 2,\n                \"patientId\": 10,\n                \"drugs\": [\n                    {\n                        \"mg\": 500,\n                        \"dose\": \"1 tablet\",\n                        \"name\": \"Paracetamol\",\n                        \"type\": \"Tablet\",\n                        \"advice\": \"Take with food\",\n                        \"duration\": \"3 times a day\"\n                    },\n                    {\n                        \"mg\": 250,\n                        \"dose\": \"1 capsule\",\n                        \"name\": \"Amoxicillin\",\n                        \"type\": \"Capsule\",\n                        \"advice\": \"Take with plenty of water\",\n                        \"duration\": \"2 times a day\"\n                    }\n                ],\n                \"tests\": [\n                    {\n                        \"name\": \"Blood Test\",\n                        \"description\": \"Complete blood count (CBC)\"\n                    },\n                    {\n                        \"name\": \"Urine Test\",\n                        \"description\": \"Urinalysis\"\n                    }\n                ],\n                \"firstName\": \"Jane\",\n                \"lastName\": \"Doe\",\n                \"createdAt\": \"2024-04-20T06:18:21.000Z\",\n                \"updatedAt\": \"2024-04-20T06:18:21.000Z\",\n                \"knownDiseases\": \"Type 2 Diabetes\",\n                \"period\": \"6 years\",\n                \"familyHistory\": \"Brother\",\n                \"diseases\": \"Hypertension\",\n                \"birthday\": \"2000-01-01\",\n                \"email\": \"jane@example.com\",\n                \"gender\": \"Female\",\n                \"mobileNo\": \"1234567890\",\n                \"bloodGroup\": \"A+\",\n                \"weight\": 70,\n                \"height\": 170,\n                \"address\": \"456 Elm St, City\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete prescription",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/prescription/delete-prescription/1",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"prescription",
+								"delete-prescription",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "getInvoice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/invoice/get-invoices/51",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"invoice",
+								"get-invoices",
+								"51"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get Invoices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clinicUrl}}/api/v1/invoice/get-invoices",
+									"host": [
+										"{{clinicUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"invoice",
+										"get-invoices"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "555"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22b-jFgQMyNY+Uaqxt3A8Of81UaEQZU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 07:02:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"invoices\": [\n            {\n                \"id\": 1,\n                \"patientId\": 10,\n                \"paymentMode\": \"cash\",\n                \"paymentStatus\": \"unpaid\",\n                \"invoiceTitle\": \"Consultation Fee\",\n                \"amount\": 1000,\n                \"createdAt\": \"2024-04-20T06:52:07.000Z\",\n                \"updatedAt\": \"2024-04-20T06:52:07.000Z\",\n                \"firstName\": \"Jane\",\n                \"lastName\": \"Doe\",\n                \"birthday\": \"2000-01-01\",\n                \"email\": \"jane@example.com\",\n                \"gender\": \"Female\",\n                \"mobileNo\": \"1234567890\",\n                \"bloodGroup\": \"A+\",\n                \"weight\": 70,\n                \"height\": 170,\n                \"address\": \"456 Elm St, City\",\n                \"image\": \"profile_updated.jpg\",\n                \"knownDiseases\": \"Type 2 Diabetes\",\n                \"period\": \"6 years\",\n                \"familyHistory\": \"Brother\",\n                \"diseases\": \"Hypertension\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "addInvoices",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patientId\": 1,\r\n    \"paymentMode\": \"cash\",\r\n    \"paymentStatus\": \"unpaid\",\r\n    \"invoiceTitle\": \"Consultation Fee\",\r\n    \"amount\": 1000,\r\n    \"currency\":\"INR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/invoice/add-invoice/51",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"invoice",
+								"add-invoice",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteInvoices",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/invoice/delete-invoice/1",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"invoice",
+								"delete-invoice",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateInvoicesStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"paid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/invoice/update-payment-status/1",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"invoice",
+								"update-payment-status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"item": [
+				{
+					"name": "getAppointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/appointment/get-appointments/58",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"get-appointments",
+								"58"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get Appointment",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clinicUrl}}/api/v1/appointment/get-appointments",
+									"host": [
+										"{{clinicUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"appointment",
+										"get-appointments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "532"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"214-xgbeL28fJsxYyt4uiO1MO26Wk4s\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 05:13:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"appointments\": [\n            {\n                \"id\": 1,\n                \"date\": \"2024-04-22\",\n                \"timeSlot\": \"10:00 AM - 10:30 AM\",\n                \"patientId\": 9,\n                \"motifPatient\": \"Regular check-up\",\n                \"status\": \"pending\",\n                \"createdAt\": \"2024-04-22T05:13:36.000Z\",\n                \"updatedAt\": \"2024-04-22T05:13:36.000Z\",\n                \"firstName\": \"Bharat\",\n                \"lastName\": \"Rav\",\n                \"birthday\": \"1990-01-01\",\n                \"email\": \"bharat1@example.com\",\n                \"gender\": \"Male\",\n                \"mobileNo\": \"1234567890\",\n                \"bloodGroup\": \"A+\",\n                \"weight\": 70,\n                \"height\": 170,\n                \"address\": \"456 Elm St, City\",\n                \"image\": \"profile.jpg\",\n                \"knownDiseases\": null,\n                \"period\": null,\n                \"familyHistory\": null,\n                \"diseases\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "addAppointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024-04-26\",\r\n    \"start_time\": \"18:30:00\",\r\n    \"end_time\": \"19:00:00\",\r\n    \"patientId\": 3,\r\n    \"motifPatient\": \"Routine checkup\",\r\n    \"timezone\":\"Asia/Kolkata\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/appointment/add-appointment/58",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"add-appointment",
+								"58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAppointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/appointment/delete-appointment/3",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"delete-appointment",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAppointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024-04-30\",\r\n    \"start_time\": \"10:00:00\",\r\n    \"end_time\": \"11:00:00\",\r\n    \"appointmentId\": 1,\r\n    \"motifPatient\": \"Routine checkup\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/appointment/update-appointment/58",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"update-appointment",
+								"58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAppointmentStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"cancelled\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/appointment/update-status/3",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"update-status",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAppointmentsList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/appointment/get/2/Monday",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"get",
+								"2",
+								"Monday"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAppointmentsList",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clinicUrl}}/api/v1/appointment/get/2",
+									"host": [
+										"{{clinicUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"appointment",
+										"get",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"479-2nMi32+Pb0sEN6a4wjgnnp5dOzY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 13:46:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"appointmentsList\": {\n            \"slots\": [\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"09:00\",\n                    \"endTime\": \"09:30\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"09:30\",\n                    \"endTime\": \"10:00\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"10:00\",\n                    \"endTime\": \"10:30\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"10:30\",\n                    \"endTime\": \"11:00\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"11:00\",\n                    \"endTime\": \"11:30\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"11:30\",\n                    \"endTime\": \"12:00\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"12:00\",\n                    \"endTime\": \"12:30\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"12:30\",\n                    \"endTime\": \"13:00\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"13:00\",\n                    \"endTime\": \"13:30\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"13:30\",\n                    \"endTime\": \"14:00\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"14:00\",\n                    \"endTime\": \"14:30\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"14:30\",\n                    \"endTime\": \"15:00\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"15:00\",\n                    \"endTime\": \"15:30\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"15:30\",\n                    \"endTime\": \"16:00\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"16:00\",\n                    \"endTime\": \"16:30\"\n                },\n                {\n                    \"day\": \"Friday\",\n                    \"duration\": 30,\n                    \"startTime\": \"16:30\",\n                    \"endTime\": \"17:00\"\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "get Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/admin/get-users?email=test@123.com",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"get-users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@123.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"gender\": \"Male\",\r\n    \"email\": \"john1@example.com\",\r\n    \"languages\": \"english\",\r\n    \"mobileNo\": \"1234567890\",\r\n    \"address\": \"123 Main St, City\",\r\n    \"userRole\": \"doctors\",\r\n    \"image\": \"profile.jpg\",\r\n    \"bio\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/admin/add-user?email=test@123.com",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"add-user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@123.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-users",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"gender\": \"Male\",\r\n    \"languages\": \"english\",\r\n    \"mobileNo\": \"1234567890\",\r\n    \"address\": \"123 Main St, City\",\r\n    \"userRole\": \"doctors\",\r\n    \"image\": \"profile.jpg\",\r\n    \"bio\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/admin/update-user/21?email=test@123.com",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"update-user",
+								"21"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@123.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/admin/delete-user/21?email=test@123.com",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"delete-user",
+								"21"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@123.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reports",
+			"item": [
+				{
+					"name": "getListOfStatitcs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/reports/get-stats/51",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"get-stats",
+								"51"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getListOfStatitcs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clinicUrl}}/api/v1/reports/get-stats/51",
+									"host": [
+										"{{clinicUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"reports",
+										"get-stats",
+										"51"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"78-QZVRUqxawK3zaPUPX304yqewhoA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 May 2024 11:10:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"revenue\": [\n            {\n                \"total_revenue\": 1133\n            }\n        ],\n        \"patients\": [\n            {\n                \"total_patients\": 4\n            }\n        ],\n        \"appointments\": [\n            {\n                \"total_appointment\": 9\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "address",
+			"item": [
+				{
+					"name": "getByKeyword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"keyWord\":\"new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/address/getByKeyword",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"address",
+								"getByKeyword"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getByKeyword",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keyWord\":\"new\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/address/getByKeyword",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"address",
+										"getByKeyword"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2093"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"82d-7A7xKdJzLbHEnKiC+QCRT7Yxe2s\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Feb 2024 13:44:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"predictions\": [\n            {\n                \"description\": \"New York, NY, USA\",\n                \"matched_substrings\": [\n                    {\n                        \"length\": 3,\n                        \"offset\": 0\n                    }\n                ],\n                \"place_id\": \"ChIJOwg_06VPwokRYv534QaPC8g\",\n                \"reference\": \"ChIJOwg_06VPwokRYv534QaPC8g\",\n                \"structured_formatting\": {\n                    \"main_text\": \"New York\",\n                    \"main_text_matched_substrings\": [\n                        {\n                            \"length\": 3,\n                            \"offset\": 0\n                        }\n                    ],\n                    \"secondary_text\": \"NY, USA\"\n                },\n                \"terms\": [\n                    {\n                        \"offset\": 0,\n                        \"value\": \"New York\"\n                    },\n                    {\n                        \"offset\": 10,\n                        \"value\": \"NY\"\n                    },\n                    {\n                        \"offset\": 14,\n                        \"value\": \"USA\"\n                    }\n                ],\n                \"types\": [\n                    \"locality\",\n                    \"political\",\n                    \"geocode\"\n                ]\n            },\n            {\n                \"description\": \"New Zealand\",\n                \"matched_substrings\": [\n                    {\n                        \"length\": 3,\n                        \"offset\": 0\n                    }\n                ],\n                \"place_id\": \"ChIJh5Z3Fw4gLG0RM0dqdeIY1rE\",\n                \"reference\": \"ChIJh5Z3Fw4gLG0RM0dqdeIY1rE\",\n                \"structured_formatting\": {\n                    \"main_text\": \"New Zealand\",\n                    \"main_text_matched_substrings\": [\n                        {\n                            \"length\": 3,\n                            \"offset\": 0\n                        }\n                    ]\n                },\n                \"terms\": [\n                    {\n                        \"offset\": 0,\n                        \"value\": \"New Zealand\"\n                    }\n                ],\n                \"types\": [\n                    \"country\",\n                    \"political\",\n                    \"geocode\"\n                ]\n            },\n            {\n                \"description\": \"New Jersey, USA\",\n                \"matched_substrings\": [\n                    {\n                        \"length\": 3,\n                        \"offset\": 0\n                    }\n                ],\n                \"place_id\": \"ChIJn0AAnpX7wIkRjW0_-Ad70iw\",\n                \"reference\": \"ChIJn0AAnpX7wIkRjW0_-Ad70iw\",\n                \"structured_formatting\": {\n                    \"main_text\": \"New Jersey\",\n                    \"main_text_matched_substrings\": [\n                        {\n                            \"length\": 3,\n                            \"offset\": 0\n                        }\n                    ],\n                    \"secondary_text\": \"USA\"\n                },\n                \"terms\": [\n                    {\n                        \"offset\": 0,\n                        \"value\": \"New Jersey\"\n                    },\n                    {\n                        \"offset\": 12,\n                        \"value\": \"USA\"\n                    }\n                ],\n                \"types\": [\n                    \"administrative_area_level_1\",\n                    \"political\",\n                    \"geocode\"\n                ]\n            },\n            {\n                \"description\": \"New Orleans, LA, USA\",\n                \"matched_substrings\": [\n                    {\n                        \"length\": 3,\n                        \"offset\": 0\n                    }\n                ],\n                \"place_id\": \"ChIJZYIRslSkIIYRtNMiXuhbBts\",\n                \"reference\": \"ChIJZYIRslSkIIYRtNMiXuhbBts\",\n                \"structured_formatting\": {\n                    \"main_text\": \"New Orleans\",\n                    \"main_text_matched_substrings\": [\n                        {\n                            \"length\": 3,\n                            \"offset\": 0\n                        }\n                    ],\n                    \"secondary_text\": \"LA, USA\"\n                },\n                \"terms\": [\n                    {\n                        \"offset\": 0,\n                        \"value\": \"New Orleans\"\n                    },\n                    {\n                        \"offset\": 13,\n                        \"value\": \"LA\"\n                    },\n                    {\n                        \"offset\": 17,\n                        \"value\": \"USA\"\n                    }\n                ],\n                \"types\": [\n                    \"locality\",\n                    \"political\",\n                    \"geocode\"\n                ]\n            },\n            {\n                \"description\": \"New Caledonia\",\n                \"matched_substrings\": [\n                    {\n                        \"length\": 3,\n                        \"offset\": 0\n                    }\n                ],\n                \"place_id\": \"ChIJyzIaP2niJ2wR7HqT1Y_20PY\",\n                \"reference\": \"ChIJyzIaP2niJ2wR7HqT1Y_20PY\",\n                \"structured_formatting\": {\n                    \"main_text\": \"New Caledonia\",\n                    \"main_text_matched_substrings\": [\n                        {\n                            \"length\": 3,\n                            \"offset\": 0\n                        }\n                    ]\n                },\n                \"terms\": [\n                    {\n                        \"offset\": 0,\n                        \"value\": \"New Caledonia\"\n                    }\n                ],\n                \"types\": [\n                    \"country\",\n                    \"political\",\n                    \"geocode\"\n                ]\n            }\n        ],\n        \"status\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"place_id\":\"ChIJh5Z3Fw4gLG0RM0dqdeIY1rE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{clinicUrl}}/api/v1/address/getByID",
+							"host": [
+								"{{clinicUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"address",
+								"getByID"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getByID",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"place_id\":\"ChIJOwg_06VPwokRYv534QaPC8g\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/address/getByID",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"address",
+										"getByID"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "277"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"115-dLfuYuL/GzHz4pgxooHo2XhWdmo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Feb 2024 13:45:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"html_attributions\": [],\n        \"result\": {\n            \"geometry\": {\n                \"location\": {\n                    \"lat\": 40.7127753,\n                    \"lng\": -74.0059728\n                },\n                \"viewport\": {\n                    \"northeast\": {\n                        \"lat\": 40.91757705070789,\n                        \"lng\": -73.70027206817629\n                    },\n                    \"southwest\": {\n                        \"lat\": 40.47739906045452,\n                        \"lng\": -74.25908991427882\n                    }\n                }\n            }\n        },\n        \"status\": \"OK\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "clinicUrl",
+			"value": "http://localhost:8050"
+		},
+		{
+			"key": "liveUrl",
+			"value": "http://medical-latest-env-env.eba-qgpcvs9u.us-east-1.elasticbeanstalk.com/",
+			"type": "string"
+		}
+	]
+}
